@@ -32,6 +32,7 @@ Dengan menambahkan pragma omp parallel for sebelum forloop pemanggilan fungsi di
 
 ### Pengukuran Kinerja
 Data waktu (dalam mikrosekon) pengukuran kinerja sudah merupakan hasil mean dari 5 kali percobaan (kecuali pada kasus 3000) untuk setiap kasus percobaan
+
 | Kasus     | Serial       | Parallel |
 | :-----: | :-----: | :-----: |
 | 100       | 25147.22     | 3968.86 |
