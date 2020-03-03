@@ -21,10 +21,14 @@ Beberapa file yang harus ada dalam repositori tersebut diantaranya:
 
 ## Laporan Pengerjaan
 ### Deskripsi Solusi
+Perubahan algoritma serial menjadi algoritma parallel dengan menambahkan  #pragma omp parallel for num_threads(thread_count)
+sebelum forloop pemanggilan dijkstra. Sehingga parallelisasi dilakukan pada pemanggilan dijkstranya. 
 
 ### Analisis Solusi
+Dengan menambahkan pragma omp parallel for sebelum forloop pemanggilan fungsi dijkstra program berjalan ... lebih cepat dibandingkan dengan program serial. Dengan waktu eksekusi program parallel ..s dan progarm serial ..s. Solusi yang mungkin lebih baik adalah dengan melakukan parallelisasi di dalam algoritma dijkstranya.
 
 ### Jumlah Thread
+16, generally threads should be set to no more than 4 threads per real core IIRC (8 is generally good for 1 or 2 cores, 16 for 4 cores, etc).
 
 ### Pengukuran Kinerja
 Data waktu (dalam mikrosekon) pengukuran kinerja sudah merupakan hasil mean dari 5 kali percobaan (kecuali pada kasus 3000) untuk setiap kasus percobaan
