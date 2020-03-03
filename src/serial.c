@@ -94,16 +94,11 @@ void dijkstra(int N, long int **graph, int src, long int **solutionMatrix) {
     createMatrix(solutionMatrix, src, dist);
 }
 
-/* Global variables */
-long int **graph;
-long int **solutionMatrix;
-
 // driver program to test above function
 int main(int argc, char *argv[]) {
     /* Let us create the example graph discussed above */
+    long int **graph;
     int N = atoi(argv[1]);
-    int thread_count = atoi(argv[2]);
-
     graph = (long int **) malloc(sizeof(long int *) * (N + 1));
     for (int i = 0; i < N; i++) {
         graph[i] = (long int *)malloc(sizeof(long int) * (N + 1));
@@ -128,22 +123,21 @@ int main(int argc, char *argv[]) {
         }
     }
 
+    long int **solutionMatrix;
     solutionMatrix = (long int **)malloc(sizeof(long int *) * (N + 1));
 
-    printSolution("out/in", N, graph);
+    printSolution("out/input.txt", N, graph);
     
-    clock_t start, end;
-    double cpu_time_used;
-    start = clock();
-    #pragma omp parallel for num_threads(thread_count)
-    for (int i = 0; i < N; i++) {
+    double start = omp_get_wtime();
+    for (int i = 0; i < N; i++)
+    {
         dijkstra(N, graph, i, solutionMatrix);
     }
-    end = clock();
-    cpu_time_used = ((double)(end - start)) / (CLOCKS_PER_SEC / 1000000);
-    
-    printf("cpu time(in microseconds) : %lf\n", cpu_time_used);
-    printSolution("out/out", N, solutionMatrix);
+    double end = omp_get_wtime();
+    printf("cpu time(in second)      : %lf\n", end - start);
+    printf("cpu time(in microsecond) : %lf\n", (end - start)*1000000);
+
+    printSolution("out/output.txt", N, solutionMatrix);
 
     for (int i = 0; i < N; i++) {
         free(graph[i]);

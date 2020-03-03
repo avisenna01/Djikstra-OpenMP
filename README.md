@@ -9,3 +9,6 @@ Beberapa file yang harus ada dalam repositori tersebut diantaranya:
     * Pembagian tugas. Sampaikan dalam list pengerjaan untuk setiap mahasiswa. Sebagai contoh: XXXX mengerjakan fungsi YYYY, ZZZZ, dan YYZZ.
     * Laporan pengerjaan, dengan struktur laporan sesuai dengan deskripsi pada bagian sebelumnya.
 
+# Readme
+## Petunjuk pengunaan 
+Build binary dengan `make`
