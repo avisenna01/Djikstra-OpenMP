@@ -27,7 +27,14 @@ Beberapa file yang harus ada dalam repositori tersebut diantaranya:
 ### Jumlah Thread
 
 ### Pengukuran Kinerja
+Data waktu (dalam mikrosekon) pengukuran kinerja sudah merupakan hasil mean dari 5 kali percobaan (kecuali pada kasus 3000) untuk setiap kasus percobaan
+Kasus     | Serial       | Parallel
+100       | 25147.22     | 3968.86
+500       | 3065850.1    | 267327.54
+1000      | 22648403.66  | 2022286.14
+3000      | 590860173.1  | 70485652.00
 
 ### Analisis Perbandingan Kinerja
+Dari analisis singkat kami, dapat dilihat bahwa peningkatan kecepatan yang didapat dari proses pararel sekitar 10X lipat labih baik dari pada proses serial
 
 
