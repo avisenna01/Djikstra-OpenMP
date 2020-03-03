@@ -10,5 +10,13 @@ Beberapa file yang harus ada dalam repositori tersebut diantaranya:
     * Laporan pengerjaan, dengan struktur laporan sesuai dengan deskripsi pada bagian sebelumnya.
 
 # Readme
-## Petunjuk pengunaan 
-Build binary dengan `make`
+## Petunjuk pengunaan program
+* Build binary dengan `make`
+* Bila ingin menjalankan dijstra-serial gunakan `./MAIN_SERIAL <banyak-node>`
+* Bila ingin menjalankan dijstra-parallel gunakan `./MAIN_PARALLEL <banyak-node> <banyak-thread>`
+
+## Pembagian Tugas
+* 13517010 membuat program utama serial, membuat makefile, readme
+* 13517061 mengubah program serial menjadi parallel, testing
+
+## Laporan Pengerjaan
