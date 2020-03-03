@@ -20,3 +20,14 @@ Beberapa file yang harus ada dalam repositori tersebut diantaranya:
 * 13517061 mengubah program serial menjadi parallel, testing
 
 ## Laporan Pengerjaan
+### Deskripsi Solusi
+
+### Analisis Solusi
+
+### Jumlah Thread
+
+### Pengukuran Kinerja
+
+### Analisis Perbandingan Kinerja
+
+
